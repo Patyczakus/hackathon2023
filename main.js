@@ -2,6 +2,7 @@ var md
 
 var br = document.createElement("br")
 var numberT = 0
+var cardBefore
 var blockAnswers = false
 var cardJSON = [
     {
@@ -71,12 +72,15 @@ var cardJSON = [
         answersInNewLine: true,
         qu: "NA CZYM POLEGA CYBERBEZPIECZEŃSTWO?",
         an: [
-            ["ochrona danych i systemów wewnętrznych firm przed zagrożeniami, jakie niosą za sobą cyberataki", true],
             [
-                "nieautoryzowane próby użycia, wykradzenia lub uszkodzenia poufnych informacji przez wykorzystanie systemów komputerowych z lukami w zabezpieczeniach",
+                "Polega na ochronie danych i systemów wewnętrznych firm przed zagrożeniami, jakie niosą za sobą cyberataki.",
+                true,
+            ],
+            [
+                "Zajmuje się nieautoryzowanymi próbami użycia, wykradzenia lub uszkodzenia poufnych informacji przez wykorzystanie systemów komputerowych z lukami w zabezpieczeniach.",
                 false,
             ],
-            ["celowe zakłócenie interaktywnego, zorganizowanego obiegu informacji w cyberprzestrzeni", false],
+            ["To celowe zakłócenie interaktywnego, zorganizowanego obiegu informacji w cyberprzestrzeni.", false],
         ],
     },
     {
@@ -92,10 +96,10 @@ var cardJSON = [
         answersInNewLine: true,
         qu: "Czym są wirusy komputerowe?",
         an: [
-            ["Polegają one na maskowaniu obecności pewnych uruchomionych programów lub procesów systemowych ", false],
-            ["To szkodliwe oprogramowanie, rozprzestrzeniające się tylko poprzez sieć", false],
+            ["Polegają one na maskowaniu obecności pewnych uruchomionych programów lub procesów systemowych.", false],
+            ["To szkodliwe oprogramowanie, rozprzestrzeniające się tylko poprzez sieć.", false],
             [
-                "Są to małe programy komputerowe, które rozprzestrzeniają się między komputerami i zakłócają ich działanie",
+                "Są to małe programy komputerowe, które rozprzestrzeniają się między komputerami i zakłócają ich działanie.",
                 true,
             ],
         ],
@@ -104,7 +108,7 @@ var cardJSON = [
         answersInNewLine: true,
         qu: "Z jakich źródeł powinniśmy instalować aplikacje na smartfonach?",
         an: [
-            ["Autoryzowane sklepy aplikacj", true],
+            ["Autoryzowane sklepy aplikacji", true],
             ["Ruskie strony z aplikacjami", false],
             ["Od kolegi z internetu", false],
         ],
@@ -121,13 +125,16 @@ var cardJSON = [
         answersInNewLine: true,
         qu: "Czym jest atak DDoS?",
         an: [
-            ["rodzaj cyberataku, podczas którego cyberprzestępca próbuje wyłudzić od ofiary poufne informacje", false],
             [
-                "atak polegający na przeprowadzeniu ataku równocześnie z wielu miejsc jednocześnie (z wielu komputerów)",
+                "To rodzaj cyberataku, podczas którego cyberprzestępca próbuje wyłudzić od ofiary poufne informacje.",
+                false,
+            ],
+            [
+                "Jest to atak polegający na przeprowadzeniu ataku równocześnie z wielu miejsc jednocześnie (z wielu komputerów).",
                 true,
             ],
             [
-                "atak polegający na podszyciu się pod nasz prefiks i przekierowaniu ruchu kierowanego do nas – do obcej sieci",
+                "Jest atakiem polegającym na podszyciu się pod nasz prefiks i przekierowaniu ruchu kierowanego do nas – do obcej sieci.",
                 false,
             ],
         ],
@@ -137,12 +144,15 @@ var cardJSON = [
         qu: "Czym jest pharming?",
         an: [
             [
-                "grupa ataków na systemy teleinformatyczne polegająca na podszywaniu się pod inny element systemu informatycznego",
+                "To grupa ataków na systemy teleinformatyczne polegająca na podszywaniu się pod inny element systemu informatycznego.",
                 false,
             ],
-            ["próba pozyskania poufnych informacji od celu poprzez podszywanie się pod godnego zaufania agenta", false],
             [
-                "atak polegający na modyfikacji zawartości adresu www w celu przekierowania użytkownika na fałszywą stronę, mimo wpisania prawidłowego adresu strony",
+                "Jest próbą pozyskania poufnych informacji od celu poprzez podszywanie się pod godnego zaufania agenta.",
+                false,
+            ],
+            [
+                "Jest to atak polegający na modyfikacji zawartości adresu www w celu przekierowania użytkownika na fałszywą stronę, mimo wpisania prawidłowego adresu strony.",
                 true,
             ],
         ],
@@ -160,26 +170,29 @@ var cardJSON = [
         qu: "Kto to jest haker?",
         an: [
             [
-                "osoba wyszukująca i ewentualnie wykorzystująca dziury bezpieczeństwa w oprogramowaniu komputerowym, dające dostęp do zabezpieczonych zasobów",
+                "To osoba wyszukująca i ewentualnie wykorzystująca dziury bezpieczeństwa w oprogramowaniu komputerowym, dające dostęp do zabezpieczonych zasobów.",
                 true,
             ],
-            ["osoba w kapturze siedząca przed laptopem", false],
-            ["osoba łamiąca zabezpieczenia w celu dokonania przestępstwa", false],
+            ["Jest to osoba w kapturze siedząca przed laptopem.", false],
+            ["To osoba łamiąca zabezpieczenia w celu dokonania przestępstwa.", false],
         ],
     },
     {
         answersInNewLine: true,
-        qu: "Phishing to",
+        qu: "Phishing to...",
         an: [
             [
-                "fałszywe oprogramowanie, które podszywa się pod aplikacje używane przez użytkownika danego urządzenia",
+                "...fałszywe oprogramowanie, które podszywa się pod aplikacje używane przez użytkownika danego urządzenia.",
                 false,
             ],
             [
-                "rodzaj złośliwego oprogramowania, które szyfruje ważne pliki przechowywane na dysku lokalnym i sieciowym oraz żąda okupu za ich rozszyfrowanie",
+                "...rodzaj złośliwego oprogramowania, które szyfruje ważne pliki przechowywane na dysku lokalnym i sieciowym oraz żąda okupu za ich rozszyfrowanie.",
                 false,
             ],
-            ["rodzaj cyberataku, podczas którego cyberprzestępca próbuje wyłudzić od ofiary poufne informacje", true],
+            [
+                "...rodzaj cyberataku, podczas którego cyberprzestępca próbuje wyłudzić od ofiary poufne informacje.",
+                true,
+            ],
         ],
     },
 ]
@@ -199,17 +212,19 @@ function informationWindow(type) {
         autorzy: `W ramach konkurencji Hackathon brało udział 5 osób, z czego każdy był za coś odpowiedzialny. Najśmieszniejsze w tym jest to, że nie wiadomo było, co to jest cały *Hackathon*, więc każda grupa myślała na swój sposób, czy to filmem, czy to prezentacją - sęk w tym, że należało przedstawić swój problem za pomocą programu komputerowego, i mogę zaryzykować, że my jako pierwsi odkryliśmy część Hackathonu.
         
         **Patryk "_patYczakus_" Topolski** - Kapitan, pomysłodawca i główny programista
-        [Github](https://github.io/patyczakus/) | [Strona](https://patyczakus.github.io/me/)
+        [Github](https://github.io/patYczakus/) | [Strona](https://patyczakus.github.io/me/)
 
         **Michał Hołodyński** - Informator o projekcie i szukacz grafiki
         [Github](https://github.com/OperatorTaczki)
 
         **Sebastian Zalewski** - Autor pytań, szukacz grafiki, planner i pomysłodawca
+        [Github](https://github.com/Zejlew)
 
         **Agata Sysak** - Autor pytań i pomysłodawczyni
         [Github](https://github.com/bober27)
         
-        **Franciszek Chrulski** - Autor pytań i pomocnik w programowaniu`,
+        **Franciszek Chrulski** - Autor pytań i pomocnik w programowaniu
+        [Github](https://github.com/Flodooo)`,
     }
     var infoElement = document.createElement("div")
     infoElement.innerHTML = md.render(info[type].replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br />"))
@@ -233,11 +248,11 @@ function createStartWindow() {
     document.body.innerHTML = ""
 
     var startWindow = document.createElement("div")
-    startWindow.className = "startWindow"
+    startWindow.className = "startWindow home"
 
     var header = document.createElement("div")
     header.className = "header"
-    header.innerText = "Planeta Pana W."
+    header.innerText = "Planeta\nPana W."
 
     var btns = document.createElement("div")
     btns.className = "btns"
@@ -322,7 +337,11 @@ function gameFunc() {
         }
     }
 
-    var card = cardJSON[Math.floor(Math.random() * cardJSON.length)]
+    var card
+    do {
+        card = cardJSON[Math.floor(Math.random() * cardJSON.length)]
+    } while (card == cardBefore)
+    cardBefore = card
     var qu = document.createElement("div")
     qu.className = "qu"
     qu.innerText = card.qu.toUpperCase()
@@ -331,6 +350,7 @@ function gameFunc() {
     card.an.forEach((an) => {
         var ane = document.createElement("button")
         ane.innerText = an[0]
+        ane.className = "B_an"
 
         ane.addEventListener("click", () => {
             if (blockAnswers) return
@@ -341,15 +361,22 @@ function gameFunc() {
                 numberT++
                 a()
                 setTimeout(() => {
-                    if (numberT >= 19) endgane()
+                    if (numberT > 19) endgane()
                     else gameFunc()
                 }, 500)
             } else {
                 ane.style.background = "#932525"
                 numberT--
                 numberT = Math.max(numberT, 0)
+                card.an
+                    .map((x, i) => i)
+                    .filter((i) => card.an[i][1])
+                    .forEach((i) => {
+                        document.querySelectorAll(".B_an")[i].style.fontWeight = "900"
+                        document.querySelectorAll(".B_an")[i].style.color = "#78A66A"
+                    })
                 a()
-                setTimeout(gameFunc, 1000)
+                setTimeout(gameFunc, 1500)
             }
         })
 
@@ -357,9 +384,6 @@ function gameFunc() {
         if (card.answersInNewLine) {
             ane.style.width = "96%"
             document.getElementById("cards").appendChild(br)
-        } else {
-            ane.style.margin = "0 5px"
-            ane.style.minWidth = "300px"
         }
     })
 }
@@ -374,6 +398,8 @@ function endgane() {
     startWindow.innerText = "Wygrana!"
 
     var btns = document.createElement("div")
+    btns.style.display = "flex"
+    btns.style.flexDirection = "column"
 
     var btnBack = document.createElement("button")
     btnBack.innerText = "Zjedz smaczny i ciepły obiadek..."

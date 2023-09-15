@@ -27,7 +27,15 @@ div.startWindow {
     flex-direction: column;
 }
 
-.startWindow .header {
+div.startWindow.home {
+    flex-direction: row;
+}
+
+div.btns {
+    width: 65%;
+}
+
+.startWindow.home .header {
     padding: 12px;
     font-size: 600%;
     font-weight: 600;
