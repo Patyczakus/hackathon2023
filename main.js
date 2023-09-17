@@ -211,16 +211,16 @@ function informationWindow(type) {
         *Wracasz na swoją planetę i babcia czeka na ciebie z pyszniutkim i ciepłym obiadkiem*`,
         autorzy: `W ramach konkurencji Hackathon brało udział 5 osób, z czego każdy był za coś odpowiedzialny. Najśmieszniejsze w tym jest to, że nie wiadomo było, co to jest cały *Hackathon*, więc każda grupa myślała na swój sposób, czy to filmem, czy to prezentacją - sęk w tym, że należało przedstawić swój problem za pomocą programu komputerowego, i mogę zaryzykować, że my jako pierwsi odkryliśmy część Hackathonu.
         
-        **Patryk "_patYczakus_" Topolski** - Kapitan, pomysłodawca i główny programista
+        **Patryk "patYczakus" Topolski** - Kapitan, pomysłodawca i główny programista
         [Github](https://github.io/patYczakus/) | [Strona](https://patyczakus.github.io/me/)
 
-        **Michał Hołodyński** - Informator o projekcie i szukacz grafiki
+        **Michał Hołdyński** - Informator o projekcie i szukacz grafiki
         [Github](https://github.com/OperatorTaczki)
 
         **Sebastian Zalewski** - Autor pytań, szukacz grafiki, planner i pomysłodawca
         [Github](https://github.com/Zejlew)
 
-        **Agata Sysak** - Autor pytań i pomysłodawczyni
+        **Agata Sysak** - Autorka pytań i pomysłodawczyni
         [Github](https://github.com/bober27)
         
         **Franciszek Chrulski** - Autor pytań i pomocnik w programowaniu
